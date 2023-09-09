@@ -12,7 +12,7 @@
 
 body {
     color: #555;
-    font-family: Open Sans;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     position: relative;
     height: 100vh;
@@ -258,3 +258,36 @@ h2 {
 .elemento:hover .elemento_eliminar--btn { display: block; }
 .elemento:hover .elemento_valor { transform: translateX(-20px); }
 .elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
+
+
+/* Este parte del codigo es para hacerlo responsible en mobile */
+
+.contenedor {
+    width: 100%;
+    max-width: 900px; /* Establece un ancho máximo */
+    margin: 0px auto;
+    padding: 20px;
+}
+
+/* Hacer que las secciones de ingresos y egresos sean flexibles en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .ingreso, .egreso {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-top: 10px;
+    }
+    
+    .contenedor {
+        display: block; /* Cambia a diseño de bloque en pantallas pequeñas */
+    }
+    
+    /* Ajustes de tamaño de fuente para texto */
+    .agregar_tipo, .agregar_descripcion, .agregar_valor {
+        width: 100%;
+    }
+    
+    /* Ajuste de tamaño de fuente para títulos */
+    h2 {
+        font-size: 16px;
+    }
+}
